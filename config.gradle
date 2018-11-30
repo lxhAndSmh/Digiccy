@@ -27,7 +27,8 @@ ext {
             //other
             butterknife       : '9.0.0-rc1',
             leakcanary        : '1.6.2',
-            orhanobutLogger   : '2.2.0'
+            orhanobutLogger   : '2.2.0',
+            greenDAO          : '3.2.2'
     ]
 
     //正式环境

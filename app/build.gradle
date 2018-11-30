@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
@@ -64,4 +65,5 @@ dependencies {
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:' + rootProject.ext.dependVersion.leakcanary
     debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:' + rootProject.ext.dependVersion.leakcanary
     implementation 'com.orhanobut:logger:' + rootProject.ext.dependVersion.orhanobutLogger
+    implementation 'org.greenrobot:greendao:' + rootProject.ext.dependVersion.greenDAO
 }
