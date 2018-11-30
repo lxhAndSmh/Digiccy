@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.botpy.digiccy.app.DigiccyApplication;
+import com.botpy.digiccy.component.TLog;
 import com.botpy.digiccy.util.TUtil;
 
 import butterknife.ButterKnife;
@@ -29,7 +30,9 @@ public abstract class BaseActivity<T extends RxPresenter> extends AppCompatActiv
         mPresenter.attachView(this);
 
         initPhotoError();
-        DigiccyApplication.getInstance().addActivity(this);
+        TLog.json(DigiccyApplication.getInstance() + "app");
+        TLog.json(this.getLocalClassName() + "name");
+//        DigiccyApplication.getInstance().addActivity(this);
 
         onViewCreated();
     }

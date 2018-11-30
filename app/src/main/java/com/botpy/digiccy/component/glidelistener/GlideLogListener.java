@@ -2,7 +2,7 @@ package com.botpy.digiccy.component.glidelistener;
 
 import android.support.annotation.Nullable;
 
-import com.botpy.digiccy.util.TLog;
+import com.botpy.digiccy.component.TLog;
 import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;

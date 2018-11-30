@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 
-import com.botpy.digiccy.util.TLog;
+import com.botpy.digiccy.component.TLog;
 import com.squareup.leakcanary.LeakCanary;
 
 import java.util.HashSet;
@@ -24,8 +24,8 @@ public class DigiccyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        mContext = getApplicationContext();
         application = this;
+        mContext = getApplicationContext();
 
         //初始化LeakCanary
         if (LeakCanary.isInAnalyzerProcess(this)) {

@@ -1,6 +1,6 @@
 package com.botpy.digiccy.api.converter;
 
-import com.botpy.digiccy.util.TLog;
+import com.botpy.digiccy.component.TLog;
 import com.google.gson.Gson;
 
 import java.io.IOException;

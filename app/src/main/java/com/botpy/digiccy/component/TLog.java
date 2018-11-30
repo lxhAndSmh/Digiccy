@@ -1,4 +1,4 @@
-package com.botpy.digiccy.util;
+package com.botpy.digiccy.component;
 
 import android.support.annotation.Nullable;
 

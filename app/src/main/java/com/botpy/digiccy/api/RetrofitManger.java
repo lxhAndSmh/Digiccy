@@ -2,7 +2,7 @@ package com.botpy.digiccy.api;
 
 import com.botpy.digiccy.BuildConfig;
 import com.botpy.digiccy.api.converter.MineGsonConverterFactory;
-import com.botpy.digiccy.util.TLog;
+import com.botpy.digiccy.component.TLog;
 import com.google.gson.Gson;
 
 import java.io.IOException;
