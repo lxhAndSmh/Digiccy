@@ -4,7 +4,7 @@ import android.widget.TextView;
 
 import com.botpy.digiccy.R;
 import com.botpy.digiccy.base.BaseActivity;
-import com.botpy.digiccy.util.ToastUtil;
+import com.botpy.digiccy.component.TLog;
 
 import butterknife.BindView;
 
@@ -25,17 +25,18 @@ public class SampleActivity extends BaseActivity<SamplePresenter> implements Sam
 
     @Override
     public void onRequestStart() {
-        ToastUtil.show(this, "开始");
+        TLog.d("SampleActivity", "开始");
     }
 
     @Override
     public void onRequestEnd() {
-        ToastUtil.show(this, "结束");
+        TLog.d("结束");
     }
 
     @Override
     public void onRequestError(String msg) {
         nameTv.setText(msg);
+        TLog.d(msg);
     }
 
     @Override

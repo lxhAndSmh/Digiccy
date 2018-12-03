@@ -30,9 +30,7 @@ public abstract class BaseActivity<T extends RxPresenter> extends AppCompatActiv
         mPresenter.attachView(this);
 
         initPhotoError();
-        TLog.json(DigiccyApplication.getInstance() + "app");
-        TLog.json(this.getLocalClassName() + "name");
-//        DigiccyApplication.getInstance().addActivity(this);
+        DigiccyApplication.getInstance().addActivity(this);
 
         onViewCreated();
     }

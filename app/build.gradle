@@ -14,13 +14,15 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            debuggable false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             buildConfigField("String", "BASE_URL", "\"$rootProject.ext.baseUrl\"")
         }
 
         debug {
             minifyEnabled false
+            debuggable true
             buildConfigField("String", "BASE_URL", "\"$rootProject.ext.debugBaseUrl\"")
         }
     }
