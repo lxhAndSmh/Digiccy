@@ -11,6 +11,8 @@ import java.io.File;
  */
 public class ConstantValues {
 
+    public static final String SP_NAME = "digiccy";
+    public static final String LANGUAGE_KEY = "current_language";
 
     //================= PATH ====================
 

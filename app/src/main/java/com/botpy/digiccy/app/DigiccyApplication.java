@@ -3,8 +3,10 @@ package com.botpy.digiccy.app;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
+import android.content.res.Configuration;
 
 import com.botpy.digiccy.component.TLog;
+import com.botpy.digiccy.util.LanguageUtil;
 import com.squareup.leakcanary.LeakCanary;
 
 import java.util.HashSet;
@@ -35,6 +37,22 @@ public class DigiccyApplication extends Application {
 
         //初始化日志打印
         TLog.init();
+
+        //设置App的语言
+        LanguageUtil.setAppLanguage(this);
+    }
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        //保存系统选择的语言
+        super.attachBaseContext(LanguageUtil.setLocale(base));
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        //保存系统选择的语言
+        LanguageUtil.setAppLanguage(getApplicationContext());
     }
 
     public static synchronized Context getContext() {
