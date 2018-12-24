@@ -1,5 +1,7 @@
 package com.botpy.digiccy.base;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -8,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.botpy.digiccy.app.DigiccyApplication;
 import com.botpy.digiccy.component.TLog;
+import com.botpy.digiccy.ui.MainActivity;
+import com.botpy.digiccy.util.LanguageUtil;
 import com.botpy.digiccy.util.TUtil;
 
 import butterknife.ButterKnife;
@@ -35,9 +39,23 @@ public abstract class BaseActivity<T extends RxPresenter> extends AppCompatActiv
         onViewCreated();
     }
 
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(LanguageUtil.setLocale(newBase));
+    }
+
     protected abstract int getLayout();
 
     protected abstract void onViewCreated();
+
+    /**
+     * 设置语言，重启MainActivity
+     */
+    protected void reStart() {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
 
     /**
      * android 7.0系统解决拍照的问题

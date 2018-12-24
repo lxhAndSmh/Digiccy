@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Digiccy</string>
+    <string name="title_activity_sample">SampleActivity</string>
+    <string name="main_tv">hello world</string>
+    <string name="user_name">han mei mei</string>
+    <string name="user_sex">female</string>
+
+</resources>
